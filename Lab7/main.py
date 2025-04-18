@@ -113,7 +113,7 @@ def update_record():
     
     try:
         field = int(input("Select field to update: "))
-    except ValueError:
+    except:
         print("Invalid option. Please enter a number.")
         return
 
@@ -161,24 +161,24 @@ def find_student_by_id(student_id):
 def delete_records():
     try:
         ID = int(input("Enter ID to delete: "))
-        for s in std_list:
-            if s['ID'] == ID:
-                std_list.remove(s)
-                log_action(f"Deleted ID {ID}")
-                print("Record deleted.\n")
-                return
-        print("No record found.\n")
+        student = find_student_by_id(ID)
+        if student:
+            std_list.remove(student)
+            log_action(f"Deleted ID {ID}")
+            print("Record deleted.\n")
+        else:
+            print("No record found.\n")
     except:
         print("Invalid input.\n")
 
 def search_student():
     try:
         ID = int(input("Enter ID to search: "))
-        for s in std_list:
-            if s['ID'] == ID:
-                print(f"Found: {s}")
-                return
-        print("Not found!\n")
+        student = find_student_by_id(ID)
+        if student:
+            print(f"Found: {student}")
+        else:
+            print("Not found!\n")
     except:
         print("Invalid input.\n")
 
@@ -212,7 +212,7 @@ def main():
 
         try:
             choice = int(input("Enter your choice (1-7): "))
-        except ValueError:
+        except:
             print("Please enter a valid number!\n")
             continue
 
