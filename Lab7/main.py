@@ -235,5 +235,5 @@ def main():
         else:
             print("Invalid option. Please choose between 1 to 7.\n")
 
-if __name__ == "__main__":
-    main()
+
+main()
