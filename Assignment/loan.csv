@@ -2,5 +2,5 @@ Applicant_ID,Age,Gender,Income,Employment_Type,Credit_Score,Loan_Amount,Marital_
 A001,28,Male,50000,Salaried,700,200000,Married,Urban,Yes
 A002,35,Female,60000,Self-Employed,,250000,Single,Semiurban,No
 A003,,Male,45000,Salaried,690,,Married,Rural,Yes
-A004,40,Female,,720,180000,,Urban,No
+A004,40,Female,,,720,180000,,Urban,No
 A005,30,Male,48000,Salaried,710,190000,Single,,Yes
